@@ -1,13 +1,19 @@
 import Home from "./pages/Home";
-import TopBar from "./Components/topbar/TopBar";
 // import Header from "./Components/header/Header";
-
+import "./index.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "./pages/About";
 function App() {
   return (
     <>
-   <TopBar/>
-   <Home/>
-   </>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Home />} path="/" />
+          <Route element={<About />} path="/about" />
+        </Routes>
+        <Home />
+      </BrowserRouter>
+    </>
   );
 }
 

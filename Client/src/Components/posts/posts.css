@@ -1,3 +1,19 @@
-.posts{
-    flex: 3;
+.posts {
+  flex: 3;
+}
+
+.postTitle {
+  font-weight: 100px;
+  color: rgb(15, 144, 138);
+}
+
+.postItem {
+  font-size: 21px;
+}
+
+.btnRead {
+  cursor: pointer;
+  background-color: rgb(167, 214, 214);
+  padding: 5px 10px;
+  font-size: 12px;
 }

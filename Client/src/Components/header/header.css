@@ -14,8 +14,7 @@
 .headerTitleSm{
     position: absolute;
     top: 18%;
-    font-size: 25px;
-    /* margin-bottom: 30px */
+    font-size: 30px;
     
 
 }
@@ -23,9 +22,8 @@
 .headerTitleLg{
     position: absolute;
     top: 25%;
-    font-size: 50px;
-    padding-left: 43%;
-    /* margin-bottom: 30px; */
+    font-size: 60px;
+    padding-left: 40%;
 }
 
 .headerImage{

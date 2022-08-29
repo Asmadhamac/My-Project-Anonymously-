@@ -1,3 +1,17 @@
-.post{
-    flex:9;
+.post {
+  flex: 3;
+}
+
+.postItem {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  gap: in-be;
+}
+
+.btnPost {
+  cursor: pointer;
+  background-color: rgb(167, 214, 214);
+  padding: 8px 20px;
+  font-size: 15px;
 }
