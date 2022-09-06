@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import "./topbar.css";
 
 export default function TopBar() {
+  const navigate = useNavigate();
+
   return (
     <div className="top">
       <div className="topLeft">
@@ -9,8 +11,10 @@ export default function TopBar() {
       </div>
       <div className="topCenter">
         <ul className="topList">
-          <li className="topListItems">HOME</li>
-          <li onClick={() => useNavigate("/about")} className="topListItems">
+          <li onClick={() => navigate("/")} className="topListItems">
+            HOME
+          </li>
+          <li onClick={() => navigate("/about")} className="topListItems">
             ABOUT
           </li>
         </ul>

@@ -4,12 +4,12 @@ const bcrypt = require("bcrypt");
 
 exports.create = async (req, res) => {
   try {
-    const found = await post.findOne({ name: req.body.name });
-    if (found) {
-      return res.status(400).json({ message: "name already taken" });
-    }
+    // const found = await post.findOne({ name: req.body.name });
+    // if (found) {
+    //   return res.status(400).json({ message: "name already taken" });
+    // }
     await post.create(req.body);
-    res.status(200).json({ message: "Name accepted!" });
+    res.status(200).json({ message: "Posted successful!" });
   } catch (e) {
     res.status(400).json({ message: "Error" });
   }
@@ -17,10 +17,10 @@ exports.create = async (req, res) => {
 
 exports.getOne = async (req, res) => {
   try {
-    const post = await post.findById(req.params.id);
-    res.status(200).json({ message: "Found", post });
+    const posts = await post.findById(req.params.id);
+    res.status(200).json({ message: "Found", posts });
   } catch (e) {
-    res.status(400).json({ message: "Error" });
+    res.status(400).json({ message: e.message });
   }
 };
 

@@ -5,13 +5,13 @@
 .postItem {
   display: flex;
   flex-direction: column;
-  padding: 60px;
+  padding: 10px;
   gap: in-be;
 }
 
 .btnPost {
   cursor: pointer;
-  background-color: rgb(167, 214, 214);
+  background-color: rgb(110, 172, 172);
   padding: 8px 20px;
   font-size: 15px;
 }

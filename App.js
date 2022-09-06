@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const cors = require("cors");
 
 const app = express();
 
@@ -9,6 +10,7 @@ const replyRoutes = require("./Routes/replyRoutes");
 dotenv.config({ path: "./.env" });
 require("./server");
 
+app.use(cors());
 app.use(express.json());
 app.use("/post", postRoutes);
 app.use("/reply", replyRoutes);

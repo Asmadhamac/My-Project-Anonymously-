@@ -4,46 +4,46 @@ import axios from "axios";
 
 
 export default function Post() {
-  const [nickName, setNickName] = useState('')
+  const [name, setName] = useState('')
   const [title, setTitle] = useState('')
- const [desc, setDesc] = useState('')
- console.log(nickName);
+ const [content, setContent] = useState('')
+
 
   const handleSubmit = async(e) => {
 e.preventDefault()
 try {
   const body = {
-    nickName: nickName,
+   name:name,
     title: title,
-    desc: desc
+    content:content
   }
-  await axios.post('http://localhost:2000/post', {
-    body
-  })
-  document.getElementsByClassName('postItem').reset()
+  const res = await axios.post('http://localhost:2000/post', body)
+  console.log(res)
+  setName("")
+  setTitle("")
+  setContent("")
 } catch (error) {
   console.log(error);
   
 }
-
-
   }
   return (
-    <div className="post">
-      <form onSubmit={handleSubmit} className="postItem">
-        <input value={nickName} onChange={(e)=> setNickName(e.target.value)} type="text" placeholder="Enter a Nickname"></input>
+    <div className="post border">
+      <form onSubmit={handleSubmit} className="postItem ">
+        <input value={name} onChange={(e)=> setName(e.target.value)} type="text" placeholder="Enter a Nickname"></input>
         <br></br>
         <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Enter Your Title" />
         <br></br>
         <textarea 
-        value={desc} onChange={(e) => setDesc(e.target.value)}
+        value={content} onChange={(e) => setContent(e.target.value)}
           className="postTextarea"
           placeholder="What's On your Mind...."
           rows="15"
         />
         <br></br>
         <div>
-          <button className="btnPost" type="submit">
+          
+          <button className="bg-[#6eacac] py-3 px-5 rounded-md text-sm text-white" type="submit">
             Post
           </button>
         </div>

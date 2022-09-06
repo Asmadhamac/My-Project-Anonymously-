@@ -1,17 +1,20 @@
-import Header from "../Components/header/Header"
-import Post from "../Components/post/Post"
-import Posts from "../Components/posts/Posts"
-import "./home.css"
+import Header from "../Components/header/Header";
+import Post from "../Components/post/Post";
+import Posts from "../Components/posts/Posts";
+import TopBar from "../Components/topbar/TopBar";
+import "./home.css";
 
-export default function Home() {
+function Home() {
   return (
     <>
-            <Header/>
-        <div className="home">
-          <Post/>
-          <Posts/>
-          </div> 
-           HomePage
-        </>
+      <TopBar />
+      <Header />
+      <div className="home">
+        <Post />
+        <Posts />
+      </div>
+    </>
   );
 }
+
+export default Home;

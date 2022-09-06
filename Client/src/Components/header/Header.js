@@ -1,17 +1,15 @@
-
-import "./header.css"
+import "./header.css";
 export default function Header() {
   return (
-    <div className='header'>
-        <div className="headerTitles">
-            <div className="headerTitleSm">welcome!</div>
-            <div className="headerTitleLg"> To a Safe Space Where You Can Express yourself...</div>
+    <div className="header">
+      <div className="headerTitles">
+        <div className="headerTitleSm">welcome!</div>
+        <div className="headerTitleLg">
+          {" "}
+          To a Safe Space Where You Can Express yourself...
         </div>
-        <img className="headerImage"
-        src="./headerimage.jpeg"
-        alt=""
-        >
-        </img>
-        </div>
-  )
+      </div>
+      <img className="headerImage" src="/headerimage.jpeg" alt=""></img>
+    </div>
+  );
 }
