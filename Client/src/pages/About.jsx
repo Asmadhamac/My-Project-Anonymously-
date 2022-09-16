@@ -8,7 +8,7 @@ const About = () => {
       <TopBar />
       <Header />
 
-      <div className="flex justify-center items-center font-bold py-10">
+      <div className="flex justify-center items-center font-bold py-10 uppercase ">
         About
       </div>
       <div className="flex justify-center w-3/5 m-auto py-15">

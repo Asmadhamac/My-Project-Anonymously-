@@ -4,10 +4,6 @@ const bcrypt = require("bcrypt");
 
 exports.create = async (req, res) => {
   try {
-    // const found = await post.findOne({ name: req.body.name });
-    // if (found) {
-    //   return res.status(400).json({ message: "name already taken" });
-    // }
     await post.create(req.body);
     res.status(200).json({ message: "Posted successful!" });
   } catch (e) {
